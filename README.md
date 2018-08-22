@@ -28,3 +28,7 @@ A basic example can be found in the [Developer documentation](docs/en/index.md).
 ```
 composer require silverstripe/search-data-extractor
 ```
+
+## Credits
+
+* [NZTA](https://github.com/NZTA)
