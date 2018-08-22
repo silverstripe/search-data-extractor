@@ -1,0 +1,9 @@
+---
+Name: search-data-extractor-routes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+SilverStripe\Control\Director:
+  rules:
+    'api/v1/search-data-extractor': 'SilverStripe\SearchDataExtractor\Control\SearchDataExtractorAPIController'

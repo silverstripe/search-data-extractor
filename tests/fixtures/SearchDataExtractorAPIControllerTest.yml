@@ -1,0 +1,27 @@
+SilverStripe\Security\Member:
+  api-member:
+    FirstName: API
+    Surname: User
+    Email: api-member
+    Password: api-member-pw
+
+SilverStripe\Security\Permission:
+  api-permission:
+    Code: SEARCH_DATA_EXTRACTOR_ACCESS
+    Arg: 0
+    Type: 1
+
+SilverStripe\Security\Group:
+  api-group:
+    Title: API Group
+    Code: api-group
+    Permissions: =>SilverStripe\Security\Permission.api-permission
+    Members: =>SilverStripe\Security\Member.api-member
+
+SilverStripe\SearchDataExtractor\Dev\TestClassExtractable:
+  one:
+    Title: One
+    Content: Content for One
+  two:
+    Title: Two
+    Content: Content for Two
