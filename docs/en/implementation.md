@@ -99,3 +99,13 @@ SilverStripe\SearchDataExtractor\Control\SearchDataExtractorAPIController:
 After adding this extension to your object, it can now be exposed via:
 
 `api/v1/search-data-extractor?class=SilverStripe\Assets\File`
+
+### Pagination
+
+Records will be paginated based on the page size defined in `SearchDataExtractorAPIController::$pagination_limit`.
+They're sorted by database identifier (`ID` column) in ascending order. To retrieve further pages,
+you need to pass the database identifier of the current result into the `after` request parameter.
+
+Example for records after database identifier `99`:
+
+`api/v1/search-data-extractor?class=Page&after=99`
