@@ -105,7 +105,8 @@ After adding this extension to your object, it can now be exposed via:
 Records will be paginated based on the page size defined in `SearchDataExtractorAPIController::$pagination_limit`.
 They're sorted by database identifier (`ID` column) in ascending order. To retrieve further pages,
 you need to pass the database identifier of the current result into the `after` request parameter.
+It needs to be prefixed with the type you're retrieving.
 
-Example for records after database identifier `99`:
+Example for records after database identifier `99` of type `Page`:
 
-`api/v1/search-data-extractor?class=Page&after=99`
+`api/v1/search-data-extractor?class=Page&after=Page_99`
